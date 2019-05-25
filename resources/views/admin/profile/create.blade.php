@@ -10,5 +10,4 @@
     <body>
         <h1>課題４応用作成その１, Add action</h1>
     </body>
-    <p>今回の課題です!!!</p>
 </html>

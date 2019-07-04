@@ -32,10 +32,10 @@
                         <thead>
                             <tr>
                                 <th width="10%">ID</th>
-                                <th width="30%">氏名</th>
+                                <th width="10%">氏名</th>
                                 <th width="10%">性別</th>
-                                <th width="10%">趣味</th>
-                                <th width="20%">自己紹介欄</th>
+                                <th width="20%">趣味</th>
+                                <th style="width:100px;">自己紹介欄</th>
                                 <th width="10%">操作</th>
                             </tr>
                         </thead>
@@ -47,7 +47,7 @@
                                     <td>{{ str_limit($profile->name, 20) }}</td>
                                     <td>{{ str_limit($profile->gender, 20) }}</td>
                                     <td>{{ str_limit($profile->hobby, 20) }}</td>
-                                    <td>{{ str_limit($profile->introduction, 20) }}</td>
+                                    <td style="word-wrap:break-word;">{{ str_limit($profile->introduction, 70) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\ProfileController@edit', ['id' => $profile->id]) }}">編集</a>

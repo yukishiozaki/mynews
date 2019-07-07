@@ -16,12 +16,12 @@
                                     <h1>{{ str_limit($headline->gender, 10) }}</h1>
                                 </div>
                                 <div class="hobby">
-                                    <h1>{{ str_limit($headline->hobby, 100) }}</h1>
+                                    <h1>{{ str_limit($headline->hobby, 200) }}</h1>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <p class="introduction">{{ str_limit($headline->introduction, 650) }}</p>
+                            <p class="introduction">{{ str_limit($headline->introduction, 1000) }}</p>
                         </div>
                     </div>
                 </div>
@@ -38,10 +38,10 @@
                                     {{ $post->updated_at->format('Y年m月d日') }}
                                 </div>
                                 <div class="name">
-                                    {{ str_limit($post->name, 50) }}
+                                    {{ str_limit($post->name, 20) }}
                                 </div>
                                 <div class="gender">
-                                    {{ str_limit($post->gender, 20) }}
+                                    {{ str_limit($post->gender, 10) }}
                                 </div>
                                 <div class="hobby">
                                     {{ str_limit($post->hobby, 200) }}

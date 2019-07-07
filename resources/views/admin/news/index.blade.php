@@ -42,6 +42,7 @@
                                 <?php \Debugbar::info($news) ?>
                                 <tr>
                                     <th>{{ $news->id }}</th>
+                                
                                     <td>{{ str_limit($news->title, 100) }}</td>
                                     <td>{{ str_limit($news->body, 250) }}</td>
                                     <td>

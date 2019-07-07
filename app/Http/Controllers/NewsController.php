@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\HTML;
 
 // 追記
 use App\News;
+use App\Profile;
 
 class NewsController extends Controller
 {
@@ -29,5 +30,26 @@ class NewsController extends Controller
         // news/index.blade.php ファイルを渡している
         // また View テンプレートに headline、 posts、 cond_title という変数を渡している
         return view('news.index', ['headline' => $headline, 'posts' => $posts, 'cond_title' => $cond_title]);
+    }
+    
+        public function profile(Request $request)
+    {
+        $cond_title = $request->cond_title;
+        // $cond_title が空白でない場合は、記事を検索して取得する
+        if ($cond_title != '') {
+            $posts = Profile::where('introduction', $cond_title).orderBy('updated_at', 'desc')->get();
+        } else {
+            $posts = Profile::all()->sortByDesc('updated_at');
+        }
+
+        if (count($posts) > 0) {
+            $headline = $posts->shift();
+        } else {
+            $headline = null;
+        }
+
+        // news/profile.blade.php ファイルを渡している
+        // また View テンプレートに headline、 posts、 cond_title という変数を渡している
+        return view('news.profile', ['headline' => $headline, 'posts' => $posts, 'cond_title' => $cond_title]);
     }
 }

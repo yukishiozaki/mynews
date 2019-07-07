@@ -41,17 +41,18 @@ body {
       font-size: 0.6em;
       color: #999999;
     }
-    .title {
+    .name {
       font-size: 1.2em;
       font-weight: bold;
     }
-    .body {
-      font-size: 0.8em;
+    .gender {
+      font-size: 1.0em;
     }
-    .image {
-      img {
-    width: 250px;
-      }
+    .hobby {
+      font-size: 1.0em;
+    }
+    .introduction {
+      font-size: 0.8em;
     }
   }
 }

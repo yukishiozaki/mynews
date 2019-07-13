@@ -96,7 +96,6 @@ class NewsController extends Controller
       } else {
           $news_form['image_path'] = $news->image_path;
       }
-      \Debugbar::info($news_form);
      
       unset($news_form['_token']);
       unset($news_form['image']);

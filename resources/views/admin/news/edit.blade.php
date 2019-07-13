@@ -58,7 +58,6 @@
                                     <li class="list-group-item">{{ $history->edited_at }}</li>
                                 @endforeach
                             @endif
-                            <?php \Debugbar::info($news_form) ?>
                         </ul>
                     </div>
                 </div>

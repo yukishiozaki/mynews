@@ -46,7 +46,7 @@ class NewsController extends Controller
   
   public function index(Request $request)
   {
-      \Debugbar::info($request);
+
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
           // 検索されたら検索結果を取得する

@@ -4,7 +4,7 @@
     <div class="container">
         <hr color="#c0c0c0">
         @if (!is_null($headline))
-            <div class="row">
+            <div class="row word-wrap-break-word">
                 <div class="headline col-md-10 mx-auto">
                     <div class="row">
                         <div class="col-md-6">
@@ -27,8 +27,7 @@
             </div>
         @endif
         <hr color="#c0c0c0">
-        <div class="row">
-            <div class="posts col-md-8 mx-auto mt-3">
+            <div class="posts col-md-8 mx-auto mt-3 word-wrap-break-word">
                 @foreach($posts as $post)
                     <div class="post">
                         <div class="row">

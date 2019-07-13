@@ -39,7 +39,6 @@
                         </thead>
                         <tbody>
                             @foreach($posts as $news)
-                                <?php \Debugbar::info($news) ?>
                                 <tr>
                                     <th>{{ $news->id }}</th>
                                 
